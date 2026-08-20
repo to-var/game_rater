@@ -32,6 +32,13 @@ import db
 API_BASE = "https://api.thegamesdb.net/v1"
 REQUEST_DELAY_SECONDS = 1.0  # be polite to the free-tier API
 
+# MAME arcade romsets (CPS1/2/3, Neo Geo) are named by cryptic short codes
+# (e.g. "ffight.zip") instead of descriptive filenames, and TheGamesDB can't
+# fuzzy-match those. For these platforms we resolve name/rating/language via
+# ArcadeItalia's free, keyless MAME database instead of TheGamesDB.
+ARCADE_PLATFORMS = {"CPS1", "CPS2", "CPS3", "NEOGEO", "NEOCD"}
+ARCADE_ITALIA_URL = "https://adb.arcadeitalia.net/service_scraper.php"
+
 # Our roms folder name -> a name (or substring) of TheGamesDB's platform.
 PLATFORM_NAME_HINTS = {
     "FC": "Nintendo Entertainment System (NES)",
@@ -158,7 +165,59 @@ def lookup_rating(api_key: str, name: str, platform_id, log=print) -> float | No
         return None
 
 
+def lookup_arcade_metadata(short_name: str, log=print) -> dict | None:
+    """Look up a MAME romset short-name (e.g. 'ffight') against ArcadeItalia's
+    free public MAME database. Returns {"title", "rating", "language"} or
+    None if there's no match."""
+    url = f"{ARCADE_ITALIA_URL}?{urllib.parse.urlencode({'ajax': 'query_mame', 'game_name': short_name})}"
+    try:
+        with urllib.request.urlopen(url, timeout=15) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except Exception as e:
+        log(f"  ArcadeItalia error for '{short_name}': {e}")
+        return None
+
+    results = data.get("result") or []
+    if not results:
+        return None
+
+    match = results[0]
+    rate = match.get("rate")
+    try:
+        rating = round(float(rate) / 10, 1) if rate not in (None, "") else None
+    except (TypeError, ValueError):
+        rating = None
+
+    return {
+        "title": match.get("title") or short_name,
+        "rating": rating,
+        "language": match.get("languages") or None,
+    }
+
+
+def scrape_arcade_platform(session_id: int, platform: str, log=print) -> None:
+    games = db.get_games_needing_scrape(session_id, platform)
+
+    log(f"{platform}: {len(games)} entries need scraping (ArcadeItalia MAME db)")
+    for game in games:
+        short_name = Path(game["file_path"]).stem
+        result = lookup_arcade_metadata(short_name, log=log)
+        if result:
+            db.update_game(game["id"], name=result["title"], rating=result["rating"], language=result["language"])
+            log(f"  [{platform}] {short_name!r} -> {result['title']!r} rating={result['rating']} language={result['language']}")
+        else:
+            db.update_metadata(game["id"], None, parse_language(game["name"]))
+            log(f"  [{platform}] {short_name!r} -> no match")
+        time.sleep(REQUEST_DELAY_SECONDS)
+
+    log(f"{platform}: done ({len(games)} entries scraped)")
+
+
 def scrape_platform(session_id: int, platform: str, api_key: str, platform_ids: dict, log=print) -> None:
+    if platform in ARCADE_PLATFORMS:
+        scrape_arcade_platform(session_id, platform, log=log)
+        return
+
     games = db.get_games_needing_scrape(session_id, platform)
     platform_id = platform_ids.get(platform)
 
@@ -184,15 +243,6 @@ def main() -> None:
     if not args.roms_dir and not args.session_id:
         raise SystemExit("Provide either --roms-dir or --session-id")
 
-    api_key = os.environ.get("TGDB_API_KEY") or config.get_api_key()
-    if not api_key:
-        raise SystemExit(
-            "Missing TheGamesDB API key. Either set the TGDB_API_KEY environment "
-            "variable, or set one persistently via the desktop app's Settings menu "
-            "(saved to ~/.game_rater/config.json). Get a free key at "
-            "https://thegamesdb.net/."
-        )
-
     if args.session_id:
         session = db.get_session(args.session_id)
         if not session:
@@ -202,7 +252,18 @@ def main() -> None:
         session_id = db.get_or_create_session(str(Path(args.roms_dir).resolve()))
 
     platforms = args.platforms or db.get_platforms(session_id)
-    platform_ids = load_platform_ids(api_key)
+    needs_tgdb = any(p not in ARCADE_PLATFORMS for p in platforms)
+
+    api_key = os.environ.get("TGDB_API_KEY") or config.get_api_key()
+    if needs_tgdb and not api_key:
+        raise SystemExit(
+            "Missing TheGamesDB API key. Either set the TGDB_API_KEY environment "
+            "variable, or set one persistently via the desktop app's Settings menu "
+            "(saved to ~/.game_rater/config.json). Get a free key at "
+            "https://thegamesdb.net/."
+        )
+
+    platform_ids = load_platform_ids(api_key) if needs_tgdb else {}
 
     for platform in platforms:
         scrape_platform(session_id, platform, api_key, platform_ids)

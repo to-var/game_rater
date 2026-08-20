@@ -186,6 +186,18 @@ def update_metadata(game_id: int, rating: float | None, language: str | None) ->
     conn.close()
 
 
+def update_game(game_id: int, name: str | None = None, rating: float | None = None, language: str | None = None) -> None:
+    """Like update_metadata, but also updates the display name (e.g. when
+    resolving a cryptic MAME short-name like 'ffight' to 'Final Fight')."""
+    conn = get_connection()
+    conn.execute(
+        "UPDATE games SET name = ?, rating = ?, language = ? WHERE id = ?",
+        (name, rating, language, game_id),
+    )
+    conn.commit()
+    conn.close()
+
+
 def get_flagged_games(session_id: int | None = None) -> list[sqlite3.Row]:
     conn = get_connection()
     if session_id is not None:

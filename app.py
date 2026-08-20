@@ -283,8 +283,9 @@ class GameRaterApp:
             messagebox.showinfo("Scrape Metadata", "Select a platform first.")
             return
 
+        is_arcade = self.current_platform in scrape_metadata.ARCADE_PLATFORMS
         api_key = os.environ.get("TGDB_API_KEY") or config.get_api_key()
-        if not api_key:
+        if not api_key and not is_arcade:
             api_key = simpledialog.askstring(
                 "TheGamesDB API Key",
                 "No API key saved yet.\nEnter your free TheGamesDB API key\n(https://thegamesdb.net/):",
@@ -296,15 +297,16 @@ class GameRaterApp:
             config.set_api_key(api_key)
             self._update_api_key_warning()
 
-        count, allowance = config.get_usage()
-        if count >= allowance:
-            proceed = messagebox.askyesno(
-                "Monthly Allowance Reached",
-                f"You've used {count}/{allowance} TheGamesDB calls this month.\n"
-                "Continue anyway?",
-            )
-            if not proceed:
-                return
+        if not is_arcade:
+            count, allowance = config.get_usage()
+            if count >= allowance:
+                proceed = messagebox.askyesno(
+                    "Monthly Allowance Reached",
+                    f"You've used {count}/{allowance} TheGamesDB calls this month.\n"
+                    "Continue anyway?",
+                )
+                if not proceed:
+                    return
 
         self.scrape_btn.configure(state="disabled")
         threading.Thread(
@@ -313,7 +315,8 @@ class GameRaterApp:
 
     def _scrape_worker(self, session_id: int, platform: str, api_key: str):
         try:
-            platform_ids = scrape_metadata.load_platform_ids(api_key)
+            is_arcade = platform in scrape_metadata.ARCADE_PLATFORMS
+            platform_ids = {} if is_arcade else scrape_metadata.load_platform_ids(api_key)
             scrape_metadata.scrape_platform(session_id, platform, api_key, platform_ids, log=self._log)
             self._log(f"Scrape complete for {platform}.")
         except Exception as e:
