@@ -22,6 +22,7 @@ import tkinter as tk
 from pathlib import Path
 from tkinter import filedialog, messagebox, simpledialog, ttk
 
+import config
 import delete_flagged
 import fetch_games
 import scrape_metadata
@@ -39,8 +40,39 @@ class GameRaterApp:
         self.entries: list[dict] = []
         self.log_queue: queue.Queue = queue.Queue()
 
+        self._build_menu()
         self._build_ui()
         self.root.after(100, self._drain_log_queue)
+
+    # ---------- menu ----------
+
+    def _build_menu(self):
+        menubar = tk.Menu(self.root)
+        settings_menu = tk.Menu(menubar, tearoff=0)
+        settings_menu.add_command(label="Set TheGamesDB API Key...", command=self._on_set_api_key)
+        settings_menu.add_command(label="View API Usage...", command=self._on_view_usage)
+        menubar.add_cascade(label="Settings", menu=settings_menu)
+        self.root.config(menu=menubar)
+
+    def _on_set_api_key(self):
+        current = config.get_api_key() or ""
+        new_key = simpledialog.askstring(
+            "TheGamesDB API Key",
+            "Enter your TheGamesDB API key\n(https://thegamesdb.net/):",
+            initialvalue=current,
+            show="*",
+        )
+        if new_key:
+            config.set_api_key(new_key.strip())
+            self._log("API key saved.")
+
+    def _on_view_usage(self):
+        count, allowance = config.get_usage()
+        messagebox.showinfo(
+            "TheGamesDB API Usage",
+            f"Calls used this month: {count} / {allowance}\n"
+            f"Remaining: {max(allowance - count, 0)}",
+        )
 
     # ---------- UI construction ----------
 
@@ -206,16 +238,27 @@ class GameRaterApp:
             messagebox.showinfo("Scrape Metadata", "Select a platform first.")
             return
 
-        api_key = os.environ.get("TGDB_API_KEY")
+        api_key = os.environ.get("TGDB_API_KEY") or config.get_api_key()
         if not api_key:
             api_key = simpledialog.askstring(
                 "TheGamesDB API Key",
-                "TGDB_API_KEY is not set.\nEnter your free TheGamesDB API key\n(https://thegamesdb.net/):",
+                "No API key saved yet.\nEnter your free TheGamesDB API key\n(https://thegamesdb.net/):",
                 show="*",
             )
             if not api_key:
                 return
-            os.environ["TGDB_API_KEY"] = api_key
+            api_key = api_key.strip()
+            config.set_api_key(api_key)
+
+        count, allowance = config.get_usage()
+        if count >= allowance:
+            proceed = messagebox.askyesno(
+                "Monthly Allowance Reached",
+                f"You've used {count}/{allowance} TheGamesDB calls this month.\n"
+                "Continue anyway?",
+            )
+            if not proceed:
+                return
 
         self.scrape_btn.configure(state="disabled")
         threading.Thread(target=self._scrape_worker, args=(self.current_platform, api_key), daemon=True).start()

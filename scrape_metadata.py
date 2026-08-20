@@ -29,6 +29,8 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+import config
+
 API_BASE = "https://api.thegamesdb.net/v1"
 REQUEST_DELAY_SECONDS = 1.0  # be polite to the free-tier API
 
@@ -103,7 +105,9 @@ def api_get(path: str, api_key: str, params: dict) -> dict:
     query["apikey"] = api_key
     url = f"{API_BASE}/{path}?{urllib.parse.urlencode(query)}"
     with urllib.request.urlopen(url, timeout=15) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+        result = json.loads(resp.read().decode("utf-8"))
+    config.record_api_call()
+    return result
 
 
 def load_platform_ids(api_key: str, metadata_dir: Path) -> dict:
@@ -195,11 +199,13 @@ def main() -> None:
     parser.add_argument("platforms", nargs="*", help="Platform names to process (default: all *.json in metadata dir)")
     args = parser.parse_args()
 
-    api_key = os.environ.get("TGDB_API_KEY")
+    api_key = os.environ.get("TGDB_API_KEY") or config.get_api_key()
     if not api_key:
         raise SystemExit(
-            "Missing TGDB_API_KEY environment variable. "
-            "Get a free key at https://thegamesdb.net/ and set it before running."
+            "Missing TheGamesDB API key. Either set the TGDB_API_KEY environment "
+            "variable, or set one persistently via the desktop app's Settings menu "
+            "(saved to ~/.game_rater/config.json). Get a free key at "
+            "https://thegamesdb.net/."
         )
 
     metadata_dir = Path(args.metadata_dir)
