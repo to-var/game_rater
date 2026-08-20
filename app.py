@@ -314,7 +314,7 @@ class GameRaterApp:
     def _scrape_worker(self, session_id: int, platform: str, api_key: str):
         try:
             platform_ids = scrape_metadata.load_platform_ids(api_key)
-            scrape_metadata.scrape_platform(session_id, platform, api_key, platform_ids)
+            scrape_metadata.scrape_platform(session_id, platform, api_key, platform_ids, log=self._log)
             self._log(f"Scrape complete for {platform}.")
         except Exception as e:
             self._log(f"Scrape failed: {e}")

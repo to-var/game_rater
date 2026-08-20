@@ -137,14 +137,14 @@ def load_platform_ids(api_key: str) -> dict:
     return resolved
 
 
-def lookup_rating(api_key: str, name: str, platform_id) -> float | None:
+def lookup_rating(api_key: str, name: str, platform_id, log=print) -> float | None:
     params = {"name": name}
     if platform_id is not None:
         params["filter[platform]"] = platform_id
     try:
         data = api_get("Games/ByGameName", api_key, params)
     except Exception as e:
-        print(f"  API error for '{name}': {e}")
+        log(f"  API error for '{name}': {e}")
         return None
 
     games = data.get("data", {}).get("games", [])
@@ -158,19 +158,20 @@ def lookup_rating(api_key: str, name: str, platform_id) -> float | None:
         return None
 
 
-def scrape_platform(session_id: int, platform: str, api_key: str, platform_ids: dict) -> None:
+def scrape_platform(session_id: int, platform: str, api_key: str, platform_ids: dict, log=print) -> None:
     games = db.get_games_needing_scrape(session_id, platform)
     platform_id = platform_ids.get(platform)
 
+    log(f"{platform}: {len(games)} entries need scraping")
     for game in games:
         search_name = clean_search_name(game["name"])
-        rating = lookup_rating(api_key, search_name, platform_id)
+        rating = lookup_rating(api_key, search_name, platform_id, log=log)
         language = parse_language(game["name"])
         db.update_metadata(game["id"], rating, language)
-        print(f"  [{platform}] {game['name']!r} -> rating={rating}, language={language}")
+        log(f"  [{platform}] {game['name']!r} -> rating={rating}, language={language}")
         time.sleep(REQUEST_DELAY_SECONDS)
 
-    print(f"{platform}: done ({len(games)} entries scraped)")
+    log(f"{platform}: done ({len(games)} entries scraped)")
 
 
 def main() -> None:
