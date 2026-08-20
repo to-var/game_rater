@@ -1,23 +1,20 @@
 """
-Fill in "rating" and "language" for every entry in <metadata-dir>\\<PLATFORM>.json
-using TheGamesDB (https://thegamesdb.net/) for rating, and filename
-region/language tags for language (TheGamesDB has no per-release language
-field, so this is the best available signal without a different API).
+Fill in "rating" and "language" for games stored in the DB (see db.py) using
+TheGamesDB (https://thegamesdb.net/) for rating, and filename region/
+language tags for language (TheGamesDB has no per-release language field,
+so this is the best available signal without a different API).
 
-Setup:
-    1. Create a free account at https://thegamesdb.net/
-    2. Go to your account page and request/copy your API key.
-    3. Set it as an environment variable before running:
-         PowerShell:  $env:TGDB_API_KEY = "your-key-here"
-         bash:        export TGDB_API_KEY="your-key-here"
+Setup: set your API key persistently via the desktop app's Settings menu
+(saved to ~/.game_rater/config.json), or set the TGDB_API_KEY environment
+variable. Get a free key at https://thegamesdb.net/.
 
 Usage:
-    python scrape_metadata.py --metadata-dir "F:\\metadata"             # all platforms
-    python scrape_metadata.py --metadata-dir "F:\\metadata" FC SFC      # only these
+    python scrape_metadata.py --roms-dir "F:\\Roms"             # all platforms in that session
+    python scrape_metadata.py --roms-dir "F:\\Roms" FC SFC      # only these platforms
+    python scrape_metadata.py --session-id 3
 
-Resumable: entries that already have a non-null "rating" are skipped, so you
-can re-run this after it's interrupted (rate limits, network errors, etc).
-Progress is saved after each platform finishes.
+Resumable: entries that already have rating+language are skipped, so you can
+re-run this after it's interrupted (rate limits, network errors, etc).
 """
 
 import argparse
@@ -30,6 +27,7 @@ import urllib.request
 from pathlib import Path
 
 import config
+import db
 
 API_BASE = "https://api.thegamesdb.net/v1"
 REQUEST_DELAY_SECONDS = 1.0  # be polite to the free-tier API
@@ -81,11 +79,10 @@ def parse_language(filename: str) -> str:
     """Best-effort language guess from filename region/language tags."""
     tags = PAREN_TAG_RE.findall(filename)
     for tag in tags:
-        # Multi-language tag, e.g. "En,Fr,De"
         parts = [p.strip().lower() for p in tag.split(",")]
         langs = [LANGUAGE_TAG_MAP[p] for p in parts if p in LANGUAGE_TAG_MAP]
         if langs:
-            return ", ".join(dict.fromkeys(langs))  # dedupe, keep order
+            return ", ".join(dict.fromkeys(langs))
     for tag in tags:
         key = tag.strip().lower()
         if key in REGION_TAG_MAP:
@@ -110,11 +107,13 @@ def api_get(path: str, api_key: str, params: dict) -> dict:
     return result
 
 
-def load_platform_ids(api_key: str, metadata_dir: Path) -> dict:
-    cache_path = metadata_dir / "_tgdb_platforms_cache.json"
-    if cache_path.exists():
-        with open(cache_path, "r", encoding="utf-8") as f:
-            return json.load(f)
+_platform_id_cache: dict | None = None
+
+
+def load_platform_ids(api_key: str) -> dict:
+    global _platform_id_cache
+    if _platform_id_cache is not None:
+        return _platform_id_cache
 
     data = api_get("Platforms", api_key, {})
     platforms = data["data"]["platforms"]  # id -> {name, ...}
@@ -134,8 +133,7 @@ def load_platform_ids(api_key: str, metadata_dir: Path) -> dict:
             print(f"WARNING: no TheGamesDB platform match for '{folder}' (hint: {hint})")
         resolved[folder] = match_id
 
-    with open(cache_path, "w", encoding="utf-8") as f:
-        json.dump(resolved, f, indent=2)
+    _platform_id_cache = resolved
     return resolved
 
 
@@ -160,44 +158,30 @@ def lookup_rating(api_key: str, name: str, platform_id) -> float | None:
         return None
 
 
-def process_platform(platform: str, api_key: str, platform_ids: dict, metadata_dir: Path) -> None:
-    json_path = metadata_dir / f"{platform}.json"
-    if not json_path.exists():
-        print(f"Skipping {platform}: {json_path} not found (run fetch_games.py first)")
-        return
-
-    with open(json_path, "r", encoding="utf-8") as f:
-        entries = json.load(f)
-
+def scrape_platform(session_id: int, platform: str, api_key: str, platform_ids: dict) -> None:
+    games = db.get_games_needing_scrape(session_id, platform)
     platform_id = platform_ids.get(platform)
-    changed = False
 
-    for entry in entries:
-        if entry.get("rating") is not None and entry.get("language") not in (None, ""):
-            continue  # already filled in, skip (resumable)
-
-        search_name = clean_search_name(entry["name"])
+    for game in games:
+        search_name = clean_search_name(game["name"])
         rating = lookup_rating(api_key, search_name, platform_id)
-        language = parse_language(entry["name"])
-
-        entry["rating"] = rating
-        entry["language"] = language
-        changed = True
-
-        print(f"  [{platform}] {entry['name']!r} -> rating={rating}, language={language}")
+        language = parse_language(game["name"])
+        db.update_metadata(game["id"], rating, language)
+        print(f"  [{platform}] {game['name']!r} -> rating={rating}, language={language}")
         time.sleep(REQUEST_DELAY_SECONDS)
 
-    if changed:
-        with open(json_path, "w", encoding="utf-8") as f:
-            json.dump(entries, f, indent=2, ensure_ascii=False)
-    print(f"{platform}: done ({len(entries)} entries)")
+    print(f"{platform}: done ({len(games)} entries scraped)")
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Fill in rating and language for ROM metadata JSON files using TheGamesDB.")
-    parser.add_argument("--metadata-dir", required=True, help=r'Path to the metadata folder, e.g. "F:\metadata"')
-    parser.add_argument("platforms", nargs="*", help="Platform names to process (default: all *.json in metadata dir)")
+    parser = argparse.ArgumentParser(description="Fill in rating and language for ROM games in the database using TheGamesDB.")
+    parser.add_argument("--roms-dir", help=r'Roms folder identifying the session, e.g. "F:\Roms"')
+    parser.add_argument("--session-id", type=int, help="Session id (alternative to --roms-dir)")
+    parser.add_argument("platforms", nargs="*", help="Platform names to process (default: all platforms in the session)")
     args = parser.parse_args()
+
+    if not args.roms_dir and not args.session_id:
+        raise SystemExit("Provide either --roms-dir or --session-id")
 
     api_key = os.environ.get("TGDB_API_KEY") or config.get_api_key()
     if not api_key:
@@ -208,15 +192,19 @@ def main() -> None:
             "https://thegamesdb.net/."
         )
 
-    metadata_dir = Path(args.metadata_dir)
-    platforms = args.platforms or sorted(
-        p.stem for p in metadata_dir.glob("*.json") if not p.stem.startswith("_")
-    )
+    if args.session_id:
+        session = db.get_session(args.session_id)
+        if not session:
+            raise SystemExit(f"No session with id {args.session_id}")
+        session_id = session["id"]
+    else:
+        session_id = db.get_or_create_session(str(Path(args.roms_dir).resolve()))
 
-    platform_ids = load_platform_ids(api_key, metadata_dir)
+    platforms = args.platforms or db.get_platforms(session_id)
+    platform_ids = load_platform_ids(api_key)
 
     for platform in platforms:
-        process_platform(platform, api_key, platform_ids, metadata_dir)
+        scrape_platform(session_id, platform, api_key, platform_ids)
 
 
 if __name__ == "__main__":
