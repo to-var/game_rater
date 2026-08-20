@@ -1,0 +1,2932 @@
+{
+  "1941": {
+    "language": "English",
+    "rating": 10.0,
+    "title": "1941: Counter Attack (World 900227)"
+  },
+  "1944": {
+    "language": "English",
+    "rating": 10.0,
+    "title": "1944: The Loop Master (Europe 000620)"
+  },
+  "1944d": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "1944: The Loop Master (USA 000620 Phoenix Edition) (bootleg)"
+  },
+  "1944j": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "1944: The Loop Master (Japan 000620)"
+  },
+  "19xx": {
+    "language": "English",
+    "rating": 9.5,
+    "title": "19XX: The War Against Destiny (Europe 960104)"
+  },
+  "19xxa": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "19XX: The War Against Destiny (Asia 960104)"
+  },
+  "19xxb": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "19XX: The War Against Destiny (Brazil 951218)"
+  },
+  "19xxd": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "19XX: The War Against Destiny (USA 951207 Phoenix Edition) (bootleg)"
+  },
+  "19xxh": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "19XX: The War Against Destiny (Hispanic 951218)"
+  },
+  "19xxj": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "19XX: The War Against Destiny (Japan 960104, yellow case)"
+  },
+  "19xxjr1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "19XX: The War Against Destiny (Japan 951225)"
+  },
+  "2020superbaseball": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "3countbout": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "3wonders": {
+    "language": "English",
+    "rating": 9.5,
+    "title": "Three Wonders (World 910520)"
+  },
+  "aggressorsofdarkkombat": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "alphamission2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "androdunos": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "area88": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Area 88 (Japan)"
+  },
+  "armwar": {
+    "language": "English",
+    "rating": 10.0,
+    "title": "Armored Warriors (Europe 941024)"
+  },
+  "armwar1d": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Armored Warriors (Europe 941011 Phoenix Edition) (bootleg)"
+  },
+  "armwara": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Armored Warriors (Asia 941024)"
+  },
+  "armwarr1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Armored Warriors (Europe 941011)"
+  },
+  "armwaru": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Armored Warriors (USA 941024)"
+  },
+  "armwaru1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Armored Warriors (USA 940920)"
+  },
+  "artoffighting1": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "artoffighting2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "artoffighting3": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "avsp": {
+    "language": "English",
+    "rating": 10.0,
+    "title": "Alien vs. Predator (Europe 940520)"
+  },
+  "avspa": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Alien vs. Predator (Asia 940520)"
+  },
+  "avspa3p": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "avspd": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Alien vs. Predator (Europe 940520 Phoenix Edition) (bootleg)"
+  },
+  "avsph": {
+    "language": "English, Spanish",
+    "rating": 0.0,
+    "title": "Alien vs. Predator (Hispanic 940520)"
+  },
+  "avspj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Alien vs. Predator (Japan 940520)"
+  },
+  "avspj3p": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "avspu": {
+    "language": "English",
+    "rating": 10.0,
+    "title": "Alien vs. Predator (USA 940520)"
+  },
+  "avspu3p": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "bakatonosmahjong": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "bangbead": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Bang Bead"
+  },
+  "baseballstars2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "baseballstarsprofessional": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "batcir": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Battle Circuit (Europe 970319)"
+  },
+  "batcira": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Battle Circuit (Asia 970319)"
+  },
+  "batcird": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Battle Circuit (Europe 970319 Phoenix Edition) (bootleg)"
+  },
+  "batcirj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Battle Circuit (Japan 970319)"
+  },
+  "battleflipshot": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "blazingstar": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "bluesjourney": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "breakers": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "Breakers"
+  },
+  "breakersrevenge": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "btcirj4p": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "burningfight": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "captaintomaday": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "captcomm": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Captain Commando (World 911202)"
+  },
+  "cawing": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "Carrier Air Wing (World 901012)"
+  },
+  "chikij": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Chiki Chiki Boys (Japan 900619)"
+  },
+  "choko": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Janpai Puzzle Choukou (Japan 010820)"
+  },
+  "columns": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Columns (World)"
+  },
+  "crossedswords": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "csclub": {
+    "language": "English",
+    "rating": 6.0,
+    "title": "Capcom Sports Club (Europe 971017)"
+  },
+  "csclub1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Capcom Sports Club (Europe 970722)"
+  },
+  "cscluba": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Capcom Sports Club (Asia 970722)"
+  },
+  "csclubh": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Capcom Sports Club (Hispanic 970722)"
+  },
+  "csclubj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Capcom Sports Club (Japan 970722)"
+  },
+  "cthd2003": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Crouching Tiger Hidden Dragon 2003 (hack of The King of Fighters 2001)"
+  },
+  "cthd2003s2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "cthd2003superplus": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "cworld2j": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Adventure Quiz Capcom World 2 (Japan 920611)"
+  },
+  "cyberlip": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Cyber-Lip (NGM-010)"
+  },
+  "cybots": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Cyberbots: Fullmetal Madness (Europe 950424)"
+  },
+  "cybotsj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Cyberbots: Fullmetal Madness (Japan 950420)"
+  },
+  "cybotsu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Cyberbots: Fullmetal Madness (USA 950424)"
+  },
+  "daimakai": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Daimakaimura (Japan)"
+  },
+  "daimakb": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ddsmjr4p": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ddsmur4p": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ddsom": {
+    "language": "English",
+    "rating": 10.0,
+    "title": "Dungeons & Dragons: Shadow over Mystara (Europe 960619)"
+  },
+  "ddsoma": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Shadow over Mystara (Asia 960619)"
+  },
+  "ddsoma4p": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ddsomb": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Shadow over Mystara (Brazil 960223)"
+  },
+  "ddsomh": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Shadow over Mystara (Hispanic 960223)"
+  },
+  "ddsomj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Shadow over Mystara (Japan 960619)"
+  },
+  "ddsomj4p": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ddsomjr1": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Shadow over Mystara (Japan 960223)"
+  },
+  "ddsomr1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Shadow over Mystara (Europe 960223)"
+  },
+  "ddsomr2": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Shadow over Mystara (Europe 960209)"
+  },
+  "ddsomr3": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Shadow over Mystara (Europe 960208)"
+  },
+  "ddsomr4p": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ddsomu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Shadow over Mystara (USA 960619)"
+  },
+  "ddsomu4p": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ddsomud": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Shadow over Mystara (USA 960619 Phoenix Edition) (bootleg)"
+  },
+  "ddsomur1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Shadow over Mystara (USA 960209)"
+  },
+  "ddtod": {
+    "language": "English",
+    "rating": 10.0,
+    "title": "Dungeons & Dragons: Tower of Doom (Europe 940412)"
+  },
+  "ddtoda": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Tower of Doom (Asia 940412)"
+  },
+  "ddtodd": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Tower of Doom (Europe 940412 Phoenix Edition) (bootleg)"
+  },
+  "ddtodh": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Tower of Doom (Hispanic 940412)"
+  },
+  "ddtodhr1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Tower of Doom (Hispanic 940125)"
+  },
+  "ddtodj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Tower of Doom (Japan 940412)"
+  },
+  "ddtodjr1": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Tower of Doom (Japan 940125)"
+  },
+  "ddtodjr2": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Tower of Doom (Japan 940113)"
+  },
+  "ddtodr1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Tower of Doom (Europe 940113)"
+  },
+  "ddtodu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Tower of Doom (USA 940125)"
+  },
+  "ddtodur1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dungeons & Dragons: Tower of Doom (USA 940113)"
+  },
+  "dimahoo": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Dimahoo (Europe 000121)"
+  },
+  "dimahoou": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dimahoo (USA 000121)"
+  },
+  "dimahoud": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Dimahoo (USA 000121 Phoenix Edition) (bootleg)"
+  },
+  "dino": {
+    "language": "English",
+    "rating": 7.5,
+    "title": "Cadillacs and Dinosaurs (World 930201)"
+  },
+  "dinou": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Cadillacs and Dinosaurs (USA 930201)"
+  },
+  "doubledragon": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "dstlk": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Darkstalkers: The Night Warriors (Europe 940705)"
+  },
+  "dstlka": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Darkstalkers: The Night Warriors (Asia 940705)"
+  },
+  "dstlkh": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Darkstalkers: The Night Warriors (Hispanic 940818)"
+  },
+  "dstlku": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Darkstalkers: The Night Warriors (USA 940818)"
+  },
+  "dstlku1d": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Darkstalkers: The Night Warriors (USA 940705 Phoenix Edition) (bootleg)"
+  },
+  "dstlkur1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Darkstalkers: The Night Warriors (USA 940705)"
+  },
+  "dynwar": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Dynasty Wars (USA, B-Board 89624B-?)"
+  },
+  "ecofghtr": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Eco Fighters (World 931203)"
+  },
+  "ecofghtra": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Eco Fighters (Asia 931203)"
+  },
+  "ecofghtru": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Eco Fighters (USA 940215)"
+  },
+  "ecofghtru1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Eco Fighters (USA 931203)"
+  },
+  "eightman": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Eight Man (NGM-025 ~ NGH-025)"
+  },
+  "fatalfury1": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "fatalfury2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "fatalfury3": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "fatalfuryspecial": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "fcrash": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Final Crash (bootleg of Final Fight)"
+  },
+  "ffight": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Final Fight (World, set 1)"
+  },
+  "fightfever": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "footballfrenzy": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "forgottn": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "Forgotten Worlds (World, newer)"
+  },
+  "galaxyfight": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ganryu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Ganryu / Musashi Ganryuki"
+  },
+  "garou": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Garou - Mark of the Wolves (NGM-2530)"
+  },
+  "ghostlop": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Ghostlop (prototype)"
+  },
+  "ghostpilots": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ghouls": {
+    "language": "English",
+    "rating": 10.0,
+    "title": "Ghouls'n Ghosts (World)"
+  },
+  "gigamn2": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Giga Man 2: The Power Fighters (bootleg of Mega Man 2: The Power Fighters)"
+  },
+  "gigawing": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Giga Wing (USA 990222)"
+  },
+  "gigawinga": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Giga Wing (Asia 990222)"
+  },
+  "gigawingb": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Giga Wing (Brazil 990222)"
+  },
+  "gigawingj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Giga Wing (Japan 990223)"
+  },
+  "gmahou": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Great Mahou Daisakusen (Japan 000121)"
+  },
+  "goalgoalgoal": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "gururin": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Gururin"
+  },
+  "gwingjd": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Giga Wing (Japan 990223 Phoenix Edition) (bootleg)"
+  },
+  "hsf2": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Hyper Street Fighter II: The Anniversary Edition (USA 040202)"
+  },
+  "hsf2a": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Hyper Street Fighter II: The Anniversary Edition (Asia 040202)"
+  },
+  "hsf2d": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Hyper Street Fighter II: The Anniversary Edition (Asia 040202 Phoenix Edition) (bootleg)"
+  },
+  "hsf2j": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Hyper Street Fighter II: The Anniversary Edition (Japan 040202)"
+  },
+  "jojo": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "JoJo's Venture (Europe 990128)"
+  },
+  "jojoan": {
+    "language": null,
+    "rating": 0.0,
+    "title": "JoJo's Venture (Asia 981202, NO CD)"
+  },
+  "jojoba": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "JoJo's Bizarre Adventure (Europe 991015, NO CD)"
+  },
+  "jojoban": {
+    "language": "English, Japanese",
+    "rating": 0.0,
+    "title": "JoJo no Kimyou na Bouken: Mirai e no Isan (Japan 991015, NO CD)"
+  },
+  "jojobane": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "JoJo's Bizarre Adventure (Euro 990927, NO CD)"
+  },
+  "jojon": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "JoJo's Venture (Asia 990128, NO CD)"
+  },
+  "jonasindiana": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "jyangoku": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Jyangokushi: Haoh no Saihai (Japan 990527)"
+  },
+  "jyanshindensetsu": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kabukiklash": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "karnovsrevenge": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kingofgladiator": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kingofthemonsters1": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kingofthemonsters2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kizunaencounter": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "knights": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Knights of the Round (World 911127)"
+  },
+  "kod": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "The King of Dragons (World 910805)"
+  },
+  "kof10th": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "The King of Fighters 10th Anniversary (bootleg of The King of Fighters 2002)"
+  },
+  "kof10thextraplus": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kof10thunique": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kof2000": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "The King of Fighters 2000 (NGM-2570 ~ NGH-2570)"
+  },
+  "kof2001": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "The King of Fighters 2001 (NGM-262?)"
+  },
+  "kof2001plus": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kof2001pluss2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kof2002": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "The King of Fighters 2002 (NGM-2650 ~ NGH-2650)"
+  },
+  "kof2002magicplus": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kof2002magicplus2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kof2002plus": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kof2002pluss2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kof2002pluss3": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kof2003": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "The King of Fighters 2003 (NGM-2710, Export)"
+  },
+  "kof2004hero": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kof2004ultraplus": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kof94": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "The King of Fighters '94 (NGM-055 ~ NGH-055)"
+  },
+  "kof95": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "The King of Fighters '95 (NGM-084)"
+  },
+  "kof96": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "The King of Fighters '96 (NGM-214)"
+  },
+  "kof96bootleg": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kof97": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "The King of Fighters '97 (NGM-2320)"
+  },
+  "kof97plus": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kof97pluss2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kof98": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "The King of Fighters '98 - The Slugfest / King of Fighters '98 - Dream Match Never Ends (NGM-2420)"
+  },
+  "kof99": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "The King of Fighters '99 - Millennium Battle (NGM-2510)"
+  },
+  "kofspecial2004": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "kofspecial2004plus": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "lansquenet2004": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "lastresort": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "leaguebowling": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "legendofsuccessjoe": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "lostwrld": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Lost Worlds (Japan)"
+  },
+  "magicaldrop2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "magicaldrop3": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "magicianlord": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "mahjongkyoretsuden": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "marukosdeluxequiz": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "mbomberj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Muscle Bomber: The Body Explosion (Japan 930713)"
+  },
+  "mbombrd": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "Muscle Bomber Duo: Ultimate Team Battle (World 931206)"
+  },
+  "megaman": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Mega Man: The Power Battle (CPS1, USA 951006)"
+  },
+  "megaman2": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Mega Man 2: The Power Fighters (USA 960708)"
+  },
+  "megaman2a": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Mega Man 2: The Power Fighters (Asia 960708)"
+  },
+  "megaman2h": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Mega Man 2: The Power Fighters (Hispanic 960712)"
+  },
+  "megamn2d": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Mega Man 2: The Power Fighters (USA 960708 Phoenix Edition) (bootleg)"
+  },
+  "mercs": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Mercs (World 900302)"
+  },
+  "mercsua": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Mercs (USA 900608)"
+  },
+  "metalslug1": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "metalslug2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "metalslug3": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "metalslug4": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "metalslug4plus": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "metalslug5": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "metalslug5plus": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "metalslugx": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "minnasanookagesa": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "mmancp2u": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Mega Man: The Power Battle (CPS2, USA 951006, SAMPLE Version)"
+  },
+  "mmatrix": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Mars Matrix: Hyper Solid Shooting (USA 000412)"
+  },
+  "mmatrixd": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Mars Matrix: Hyper Solid Shooting (USA 000412 Phoenix Edition) (bootleg)"
+  },
+  "mmatrixj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Mars Matrix: Hyper Solid Shooting (Japan 000412)"
+  },
+  "moneyidolexchanger": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "mpang": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "Mighty! Pang (Europe 001010)"
+  },
+  "mpangj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Mighty! Pang (Japan 001011)"
+  },
+  "mpangr1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Mighty! Pang (Europe 000925)"
+  },
+  "mpangu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Mighty! Pang (USA 001010)"
+  },
+  "msh": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Marvel Super Heroes (Europe 951024)"
+  },
+  "msha": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes (Asia 951024)"
+  },
+  "mshb": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes (Brazil 951117)"
+  },
+  "mshh": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes (Hispanic 951117)"
+  },
+  "mshj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes (Japan 951117)"
+  },
+  "mshjr1": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes (Japan 951024)"
+  },
+  "mshu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes (USA 951024)"
+  },
+  "mshud": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes (USA 951024 Phoenix Edition) (bootleg)"
+  },
+  "mshvsf": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Marvel Super Heroes Vs. Street Fighter (Europe 970625)"
+  },
+  "mshvsfa": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes Vs. Street Fighter (Asia 970625)"
+  },
+  "mshvsfa1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes Vs. Street Fighter (Asia 970620)"
+  },
+  "mshvsfb": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes Vs. Street Fighter (Brazil 970827)"
+  },
+  "mshvsfb1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes Vs. Street Fighter (Brazil 970625)"
+  },
+  "mshvsfh": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes Vs. Street Fighter (Hispanic 970625)"
+  },
+  "mshvsfj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes Vs. Street Fighter (Japan 970707)"
+  },
+  "mshvsfj1": {
+    "language": "Japanese",
+    "rating": 10.0,
+    "title": "Marvel Super Heroes Vs. Street Fighter (Japan 970702)"
+  },
+  "mshvsfj2": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes Vs. Street Fighter (Japan 970625)"
+  },
+  "mshvsfu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes Vs. Street Fighter (USA 970827)"
+  },
+  "mshvsfu1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Super Heroes Vs. Street Fighter (USA 970625)"
+  },
+  "msword": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "Magic Sword: Heroic Fantasy (World 900725)"
+  },
+  "mtwins": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Mega Twins (World 900619)"
+  },
+  "mutationnation": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "mvsc": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Marvel Vs. Capcom: Clash of Super Heroes (Europe 980123)"
+  },
+  "mvsca": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Vs. Capcom: Clash of Super Heroes (Asia 980123)"
+  },
+  "mvscar1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Vs. Capcom: Clash of Super Heroes (Asia 980112)"
+  },
+  "mvscb": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Vs. Capcom: Clash of Super Heroes (Brazil 980123)"
+  },
+  "mvsch": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Vs. Capcom: Clash of Super Heroes (Hispanic 980123)"
+  },
+  "mvscj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Marvel Vs. Capcom: Clash of Super Heroes (Japan 980123)"
+  },
+  "mvscjr1": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Marvel Vs. Capcom: Clash of Super Heroes (Japan 980112)"
+  },
+  "mvscr1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Vs. Capcom: Clash of Super Heroes (Europe 980112)"
+  },
+  "mvscu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Vs. Capcom: Clash of Super Heroes (USA 980123)"
+  },
+  "mvscud": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Marvel Vs. Capcom: Clash of Super Heroes (USA 980123 Phoenix Edition) (bootleg)"
+  },
+  "nam1975": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "NAM-1975 (NGM-001 ~ NGH-001)"
+  },
+  "nemo": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Nemo (World 901130)"
+  },
+  "nemoj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Nemo (Japan 901120, 88622B-3 ROM board)"
+  },
+  "neobomberman": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "neodriftout": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "neogeocup98": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "neonopanepon": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "neopong": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "neoturfmasters": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "nightmareinthedark": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ninjacombat": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ninjacommando": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ninjamasters": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "nwarr": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Night Warriors: Darkstalkers' Revenge (Europe 950316)"
+  },
+  "nwarra": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Night Warriors: Darkstalkers' Revenge (Asia 950302)"
+  },
+  "nwarrb": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Night Warriors: Darkstalkers' Revenge (Brazil 950403)"
+  },
+  "nwarrh": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Night Warriors: Darkstalkers' Revenge (Hispanic 950403)"
+  },
+  "nwarru": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Night Warriors: Darkstalkers' Revenge (USA 950406)"
+  },
+  "nwarrud": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Night Warriors: Darkstalkers' Revenge (USA 950406 Phoenix Edition) (bootleg)"
+  },
+  "overtop": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Over Top"
+  },
+  "pang3": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Pang! 3 (Europe 950601)"
+  },
+  "pang3j": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Pang! 3: Kaitou Tachi no Karei na Gogo (Japan 950511)"
+  },
+  "pang3n": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Pang! 3 (Euro 950511, not encrypted)"
+  },
+  "panicbomber": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "pfghtj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Pocket Fighter (Japan 970904)"
+  },
+  "pgear": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Powered Gear: Strategic Variant Armor Equipment (Japan 941024)"
+  },
+  "pgearr1": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Powered Gear: Strategic Variant Armor Equipment (Japan 940916)"
+  },
+  "pleasuregoal": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "pnickj": {
+    "language": "Japanese",
+    "rating": 7.0,
+    "title": "Pnickies (Japan 940608)"
+  },
+  "pnicku": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "pokernight": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "popnbounce": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "powerinstinctmatrimelee": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "powerspikes2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "prehistoricisle2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "progear": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Progear (Europe 010117)"
+  },
+  "progeara": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Progear (Asia 010117)"
+  },
+  "progearj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Progear no Arashi (Japan 010117)"
+  },
+  "progerjd": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Progear no Arashi (Japan 010117 Phoenix Edition) (bootleg)"
+  },
+  "pulstar": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "Pulstar"
+  },
+  "punipic": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "The Punisher (bootleg with PIC16C57, set 1)"
+  },
+  "punipic2": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "The Punisher (bootleg with PIC16C57, set 2)"
+  },
+  "punipic3": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "The Punisher (bootleg with PIC16C57, set 3)"
+  },
+  "punisher": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "The Punisher (World 930422)"
+  },
+  "punisherh": {
+    "language": "Spanish",
+    "rating": 0.0,
+    "title": "The Punisher (Hispanic 930422)"
+  },
+  "punisherj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "The Punisher (Japan 930422)"
+  },
+  "punisheru": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "The Punisher (USA 930422)"
+  },
+  "puzzlebobble1": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "puzzlebobble2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "puzzled": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "puzzledepon": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "puzzledeponr": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "pzloop2": {
+    "language": "English",
+    "rating": 4.0,
+    "title": "Puzz Loop 2 (Europe 010302)"
+  },
+  "pzloop2j": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Puzz Loop 2 (Japan 010226)"
+  },
+  "qad": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Quiz & Dragons: Capcom Quiz Game (USA 920701)"
+  },
+  "qadj": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Quiz & Dragons: Capcom Quiz Game (Japan 940921)"
+  },
+  "qndream": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Quiz Nanairo Dreams: Nijiirochou no Kiseki (Japan 960826)"
+  },
+  "qtono2": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Quiz Tonosama no Yabou 2 Zenkoku-ban (Japan 950123)"
+  },
+  "quizdaisousasen1": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "quizdaisousasen2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "quizkingoffighters": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "rageofthedragons": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ragnagard": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "realboutfatalfury1": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "realboutfatalfury2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "realboutfatalfuryspecial": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "redearth": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Red Earth (Europe 961121)"
+  },
+  "redeartn": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Red Earth (961121, NO CD)"
+  },
+  "ridinghero": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ringdest": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "Ring of Destruction: Slammasters II (Europe 940902)"
+  },
+  "ringdstd": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Ring of Destruction: Slammasters II (Europe 940902 Phoenix Edition) (bootleg)"
+  },
+  "rmancp2j": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Rockman: The Power Battle (CPS2, Japan 950922)"
+  },
+  "roboarmy": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Robo Army"
+  },
+  "rockman2j": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Rockman 2: The Power Fighters (Japan 960708)"
+  },
+  "rockmanj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Rockman: The Power Battle (CPS1, Japan 950922)"
+  },
+  "samuraishodown1": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "samuraishodown2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "samuraishodown3": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "samuraishodown4": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "samuraishodown5": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "samuraishodown5special": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "savagereign": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "sengoku1": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "sengoku2": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "Sengoku 2 / Sengoku Denshou 2"
+  },
+  "sengoku3": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "Sengoku 3 / Sengoku Densho 2001 (set 1)"
+  },
+  "sf2": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Street Fighter II: The World Warrior (World 910522)"
+  },
+  "sf2acc": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (Accelerator!, bootleg, set 1)"
+  },
+  "sf2accp2": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (Accelerator Pt.II, bootleg)"
+  },
+  "sf2b": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II: The World Warrior (bootleg, set 1)"
+  },
+  "sf2ce": {
+    "language": "English",
+    "rating": 10.0,
+    "title": "Street Fighter II': Champion Edition (World 920513)"
+  },
+  "sf2ceb": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (Playmark bootleg, set 1)"
+  },
+  "sf2ceh": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "sf2cej": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (Japan 920513)"
+  },
+  "sf2ceua": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (USA 920313)"
+  },
+  "sf2ceub": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (USA 920513)"
+  },
+  "sf2ceuc": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (USA 920803)"
+  },
+  "sf2dkot2": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (Double K.O. Turbo II, bootleg)"
+  },
+  "sf2eb": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II: The World Warrior (World 910214)"
+  },
+  "sf2ebbl": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II: The World Warrior (TAB Austria, bootleg, set 1)"
+  },
+  "sf2hf": {
+    "language": "English",
+    "rating": 10.0,
+    "title": "Street Fighter II': Hyper Fighting (World 921209)"
+  },
+  "sf2j": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Street Fighter II: The World Warrior (Japan 911210, CPS-B-13)"
+  },
+  "sf2ja": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Street Fighter II: The World Warrior (Japan 910214)"
+  },
+  "sf2jc": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Street Fighter II: The World Warrior (Japan 910306)"
+  },
+  "sf2koryu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (Xiang Long, Chinese bootleg)"
+  },
+  "sf2m1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (M1, bootleg)"
+  },
+  "sf2m10": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (M10, bootleg)"
+  },
+  "sf2m11": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "sf2m12": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "sf2m13": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "sf2m2": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (M2, bootleg)"
+  },
+  "sf2m3": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (M3, bootleg)"
+  },
+  "sf2m4": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (M4, bootleg)"
+  },
+  "sf2m5": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (M5, bootleg)"
+  },
+  "sf2m6": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (M6, bootleg)"
+  },
+  "sf2m7": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (M7, bootleg)"
+  },
+  "sf2m8": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (M8, bootleg)"
+  },
+  "sf2m9": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (M9, bootleg)"
+  },
+  "sf2mdt": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Magic Delta Turbo (bootleg, set 1)"
+  },
+  "sf2qp1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II: The World Warrior (Quicken Pt-I, bootleg)"
+  },
+  "sf2rb": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (Rainbow, bootleg, set 1)"
+  },
+  "sf2rb2": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (Rainbow, bootleg, set 2)"
+  },
+  "sf2rb3": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (Rainbow, bootleg, set 3)"
+  },
+  "sf2red": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (Red Wave, bootleg, set 1)"
+  },
+  "sf2t": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Street Fighter II' - Hyper Fighting (US 921209)"
+  },
+  "sf2th": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "sf2tj": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Street Fighter II' Turbo - Hyper Fighting (Japan 921209)"
+  },
+  "sf2tlona": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "sf2tlonb": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "sf2ua": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II: The World Warrior (USA 910206)"
+  },
+  "sf2ub": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II: The World Warrior (USA 910214)"
+  },
+  "sf2ud": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II: The World Warrior (USA 910318)"
+  },
+  "sf2ue": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II: The World Warrior (USA 910228)"
+  },
+  "sf2uf": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II: The World Warrior (USA 910411)"
+  },
+  "sf2ui": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II: The World Warrior (USA 910522, Rev. I)"
+  },
+  "sf2uk": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II: The World Warrior (USA 911101)"
+  },
+  "sf2v004": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (V004, bootleg)"
+  },
+  "sf2yyc": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter II': Champion Edition (YYC, bootleg)"
+  },
+  "sfa": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Street Fighter Alpha: Warriors' Dreams (Europe 950727)"
+  },
+  "sfa2": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Street Fighter Alpha 2 (Europe 960229)"
+  },
+  "sfa2u": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Alpha 2 (USA 960430)"
+  },
+  "sfa3": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Street Fighter Alpha 3 (Europe 980904)"
+  },
+  "sfa3b": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Alpha 3 (Brazil 980629)"
+  },
+  "sfa3u": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Alpha 3 (USA 980904)"
+  },
+  "sfa3ud": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Alpha 3 (USA 980904 Phoenix Edition) (bootleg)"
+  },
+  "sfa3ur1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Alpha 3 (USA 980629)"
+  },
+  "sfach": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Street Fighter Alpha: Warriors' Dreams (CPS Changer, Publicity USA 950727)"
+  },
+  "sfad": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Alpha: Warriors' Dreams (Europe 950727 Phoenix Edition) (bootleg)"
+  },
+  "sfar1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Alpha: Warriors' Dreams (Europe 950718)"
+  },
+  "sfar2": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Alpha: Warriors' Dreams (Europe 950627)"
+  },
+  "sfar3": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Alpha: Warriors' Dreams (Europe 950605)"
+  },
+  "sfau": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Alpha: Warriors' Dreams (USA 950627)"
+  },
+  "sfiii": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Street Fighter III: New Generation (Europe 970204)"
+  },
+  "sfiii2": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Street Fighter III 2nd Impact: Giant Attack (USA 970930)"
+  },
+  "sfiii2j": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Street Fighter III 2nd Impact: Giant Attack (Japan 970930)"
+  },
+  "sfiii2n": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter III 2nd Impact: Giant Attack (Asia 970930, NO CD)"
+  },
+  "sfiii3": {
+    "language": "English",
+    "rating": 10.0,
+    "title": "Street Fighter III 3rd Strike: Fight for the Future (Europe 990608)"
+  },
+  "sfiii3an": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Street Fighter III 3rd Strike: Fight for the Future (Japan 990512, NO CD)"
+  },
+  "sfiii3n": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Street Fighter III 3rd Strike: Fight for the Future (Japan 990608, NO CD)"
+  },
+  "sfiiij": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Street Fighter III: New Generation (Japan 970204)"
+  },
+  "sfiiin": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter III: New Generation (Asia 970204, NO CD, BIOS set 1)"
+  },
+  "sfz2a": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 2 (Asia 960227)"
+  },
+  "sfz2ad": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 2 (Asia 960227 Phoenix Edition) (bootleg)"
+  },
+  "sfz2al": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Street Fighter Zero 2 Alpha (Asia 960826)"
+  },
+  "sfz2alb": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 2 Alpha (Brazil 960813)"
+  },
+  "sfz2ald": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 2 Alpha (Asia 960826 Phoenix Edition) (bootleg)"
+  },
+  "sfz2alh": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 2 Alpha (Hispanic 960813)"
+  },
+  "sfz2alj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 2 Alpha (Japan 960805)"
+  },
+  "sfz2b": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 2 (Brazil 960531)"
+  },
+  "sfz2br1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 2 (Brazil 960304)"
+  },
+  "sfz2h": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 2 (Hispanic 960304)"
+  },
+  "sfz2j": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 2 (Japan 960430)"
+  },
+  "sfz2n": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 2 (Oceania 960229)"
+  },
+  "sfz3a": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 3 (Asia 980904)"
+  },
+  "sfz3ar1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 3 (Asia 980701)"
+  },
+  "sfz3j": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 3 (Japan 980904)"
+  },
+  "sfz3jr1": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 3 (Japan 980727)"
+  },
+  "sfz3jr2": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Street Fighter Zero 3 (Japan 980629)"
+  },
+  "sfza": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero (Asia 950627)"
+  },
+  "sfzb": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero (Brazil 951109)"
+  },
+  "sfzbr1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero (Brazil 950727)"
+  },
+  "sfzch": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Street Fighter Zero (CPS Changer, Japan 951020)"
+  },
+  "sfzh": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Street Fighter Zero (Hispanic 950718)"
+  },
+  "sfzj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Street Fighter Zero (Japan 950727)"
+  },
+  "sfzjr1": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Street Fighter Zero (Japan 950627)"
+  },
+  "sfzjr2": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Street Fighter Zero (Japan 950605)"
+  },
+  "sgemf": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Super Gem Fighter: Mini Mix (USA 970904)"
+  },
+  "sgemfa": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Gem Fighter: Mini Mix (Asia 970904)"
+  },
+  "sgemfd": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Gem Fighter: Mini Mix (USA 970904 Phoenix Edition) (bootleg)"
+  },
+  "sgemfh": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Gem Fighter: Mini Mix (Hispanic 970904)"
+  },
+  "shocktroopers1": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "shocktroopers2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "slammast": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "Saturday Night Slam Masters (World 930713)"
+  },
+  "slammasta": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "slammasth": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "slammastu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Saturday Night Slam Masters (USA 930713)"
+  },
+  "smbomb": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Super Muscle Bomber: The International Blowout (Japan 940831)"
+  },
+  "smbombr1": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Super Muscle Bomber: The International Blowout (Japan 940808)"
+  },
+  "snkvscapcom": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "snkvscapcomplus": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "snkvscapcompluss2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "snkvscapcomsuperplus": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "soccerbrawl": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "sonicwings2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "sonicwings3": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "spf2t": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Super Puzzle Fighter II Turbo (Europe 960529)"
+  },
+  "spf2ta": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Puzzle Fighter II Turbo (Asia 960529)"
+  },
+  "spf2th": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Puzzle Fighter II Turbo (Hispanic 960531)"
+  },
+  "spf2xj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Super Puzzle Fighter II X (Japan 960531)"
+  },
+  "spf2xjd": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Super Puzzle Fighter II X (Japan 960531 Phoenix Edition) (bootleg)"
+  },
+  "spinmaster": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "ssf2": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Super Street Fighter II: The New Challengers (World 931005)"
+  },
+  "ssf2a": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Street Fighter II: The New Challengers (Asia 931005)"
+  },
+  "ssf2ar1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Street Fighter II: The New Challengers (Asia 930914)"
+  },
+  "ssf2h": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Street Fighter II: The New Challengers (Hispanic 930911)"
+  },
+  "ssf2j": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Super Street Fighter II: The New Challengers (Japan 931005)"
+  },
+  "ssf2jr1": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Super Street Fighter II: The New Challengers (Japan 930911)"
+  },
+  "ssf2jr2": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Super Street Fighter II: The New Challengers (Japan 930910)"
+  },
+  "ssf2t": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Super Street Fighter II Turbo (World 940223)"
+  },
+  "ssf2ta": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Street Fighter II Turbo (Asia 940223)"
+  },
+  "ssf2tb": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Street Fighter II: The Tournament Battle (World 931119)"
+  },
+  "ssf2tbd": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Street Fighter II: The Tournament Battle (World 931119 Phoenix Edition) (bootleg)"
+  },
+  "ssf2tbj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Super Street Fighter II: The Tournament Battle (Japan 931005)"
+  },
+  "ssf2tbr1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Street Fighter II: The Tournament Battle (World 930911)"
+  },
+  "ssf2tu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Street Fighter II Turbo (USA 940323)"
+  },
+  "ssf2tur1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Street Fighter II Turbo (USA 940223)"
+  },
+  "ssf2u": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Street Fighter II: The New Challengers (USA 930911)"
+  },
+  "ssf2ud": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Super Street Fighter II: The New Challengers (USA 930911 Phoenix Edition) (bootleg)"
+  },
+  "ssf2xj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Super Street Fighter II X: Grand Master Challenge (Japan 940311)"
+  },
+  "ssf2xjd": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Super Street Fighter II X: Grand Master Challenge (Japan 940223 Phoenix Edition) (bootleg)"
+  },
+  "stakeswinner1": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "stakeswinner2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "streethoop": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "strider": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Strider (USA, B-Board 89624B-2)"
+  },
+  "striderj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Strider Hiryu (Japan)"
+  },
+  "striderjr": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Strider Hiryu (Japan Resale Ver.)"
+  },
+  "striderua": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Strider (USA, B-Board 89624B-3)"
+  },
+  "strikers1945plus": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "superdodgeball": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "supersidekicks1": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "supersidekicks2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "supersidekicks3": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "syouginotatsujin": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "tecmoworldsoccer96": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "thelastblade1": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "thelastblade2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "thesuperspy": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "theultimate2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "thrashrally": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "tophunter": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "topplayersgolf": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "twinklestarsprites": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "uecology": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Ultimate Ecology (Japan 931203)"
+  },
+  "unsquad": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "U.N. Squadron (USA)"
+  },
+  "vampj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Vampire: The Night Warriors (Japan 940705)"
+  },
+  "vampja": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Vampire: The Night Warriors (Japan 940705 alt)"
+  },
+  "vampjr1": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Vampire: The Night Warriors (Japan 940630)"
+  },
+  "varth": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Varth: Operation Thunderstorm (World 920714)"
+  },
+  "varthj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Varth: Operation Thunderstorm (Japan 920714)"
+  },
+  "varthr1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Varth: Operation Thunderstorm (World 920612)"
+  },
+  "varthu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Varth: Operation Thunderstorm (USA 920612)"
+  },
+  "vhunt2": {
+    "language": "Japanese",
+    "rating": 8.0,
+    "title": "Vampire Hunter 2: Darkstalkers Revenge (Japan 970929)"
+  },
+  "vhunt2r1": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Vampire Hunter 2: Darkstalkers Revenge (Japan 970913)"
+  },
+  "vhuntj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Vampire Hunter: Darkstalkers' Revenge (Japan 950316)"
+  },
+  "vhuntjr1": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Vampire Hunter: Darkstalkers' Revenge (Japan 950307)"
+  },
+  "vhuntjr2": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Vampire Hunter: Darkstalkers' Revenge (Japan 950302)"
+  },
+  "viewpoint": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "voltagefightergowcaizer": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "vsav": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Vampire Savior: The Lord of Vampire (Europe 970519)"
+  },
+  "vsav2": {
+    "language": "Japanese",
+    "rating": 8.0,
+    "title": "Vampire Savior 2: The Lord of Vampire (Japan 970913)"
+  },
+  "vsava": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Vampire Savior: The Lord of Vampire (Asia 970519)"
+  },
+  "vsavd": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Vampire Savior: The Lord of Vampire (Europe 970519 Phoenix Edition) (bootleg)"
+  },
+  "vsavh": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Vampire Savior: The Lord of Vampire (Hispanic 970519)"
+  },
+  "vsavj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Vampire Savior: The Lord of Vampire (Japan 970519)"
+  },
+  "vsavu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Vampire Savior: The Lord of Vampire (USA 970519)"
+  },
+  "wakuwaku7": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "warzard": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Warzard (Japan 961121)"
+  },
+  "willow": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "Willow (World)"
+  },
+  "willowj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Willow (Japan)"
+  },
+  "willowje": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Willow (Japan, English)"
+  },
+  "windjammers": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "wof": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "Warriors of Fate (World 921031)"
+  },
+  "wof3js": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "wof3sj": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "wof3sja": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "wofa": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Sangokushi II (Asia 921005)"
+  },
+  "wofb": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "wofch": {
+    "language": null,
+    "rating": 0.0,
+    "title": "Tenchi wo Kurau II: Sekiheki no Tatakai (CPS Changer, Japan 921031)"
+  },
+  "wofh": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "wofha": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "wofhfh": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Huo Feng Huang (Chinese bootleg of Sangokushi II)"
+  },
+  "wofj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Tenchi wo Kurau II: Sekiheki no Tatakai (Japan 921031)"
+  },
+  "wofsj": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "wofsja": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "wofsjb": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "wofu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Warriors of Fate (USA 921031)"
+  },
+  "wonder3": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "Wonder 3 (Japan 910520)"
+  },
+  "worldheroes1": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "worldheroes2": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "worldheroes2jet": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "worldheroesperfect": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "xmcota": {
+    "language": "English",
+    "rating": 8.0,
+    "title": "X-Men: Children of the Atom (Europe 950331)"
+  },
+  "xmcotaa": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "X-Men: Children of the Atom (Asia 950105)"
+  },
+  "xmcotad": {
+    "language": null,
+    "rating": 0.0,
+    "title": "X-Men: Children of the Atom (Euro 950105 Phoenix Edition) (bootleg)"
+  },
+  "xmcotah": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "X-Men: Children of the Atom (Hispanic 950331)"
+  },
+  "xmcotaj": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "X-Men: Children of the Atom (Japan 950105)"
+  },
+  "xmcotaj1": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "X-Men: Children of the Atom (Japan 941222)"
+  },
+  "xmcotaj2": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "X-Men: Children of the Atom (Japan 941219)"
+  },
+  "xmcotaj3": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "X-Men: Children of the Atom (Japan 941217)"
+  },
+  "xmcotajr": {
+    "language": "Japanese",
+    "rating": 0.0,
+    "title": "X-Men: Children of the Atom (Japan 941208 rent version)"
+  },
+  "xmcotau": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "X-Men: Children of the Atom (USA 950105)"
+  },
+  "xmvsf": {
+    "language": "English",
+    "rating": 9.0,
+    "title": "X-Men Vs. Street Fighter (Europe 961004)"
+  },
+  "xmvsfa": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "X-Men Vs. Street Fighter (Asia 961023)"
+  },
+  "xmvsfar1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "X-Men Vs. Street Fighter (Asia 961004)"
+  },
+  "xmvsfb": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "X-Men Vs. Street Fighter (Brazil 961023)"
+  },
+  "xmvsfh": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "X-Men Vs. Street Fighter (Hispanic 961004)"
+  },
+  "xmvsfj": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "X-Men Vs. Street Fighter (Japan 970113)"
+  },
+  "xmvsfjr1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "X-Men Vs. Street Fighter (Japan 961023)"
+  },
+  "xmvsfjr2": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "X-Men Vs. Street Fighter (Japan 961004)"
+  },
+  "xmvsfr1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "X-Men Vs. Street Fighter (Europe 960910)"
+  },
+  "xmvsfu": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "X-Men Vs. Street Fighter (USA 961023)"
+  },
+  "xmvsfu1d": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "X-Men Vs. Street Fighter (USA 961004 Phoenix Edition) (bootleg)"
+  },
+  "xmvsfur1": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "X-Men Vs. Street Fighter (USA 961004)"
+  },
+  "zedblade": {
+    "language": "English",
+    "rating": 0.0,
+    "title": "Zed Blade / Operation Ragnarok"
+  },
+  "zintrick": {
+    "language": null,
+    "rating": null,
+    "title": null
+  },
+  "zupapa": {
+    "language": "English",
+    "rating": 7.0,
+    "title": "Zupapa!"
+  }
+}

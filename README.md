@@ -50,26 +50,28 @@ Scans the folder and upserts games into the session for that path.
 
 ### scrape_metadata.py
 
-Metadata source depends on platform, since a single API doesn't cover both
-well:
+Metadata source is decided **per game, by filename shape** — not by which
+platform folder the file is in (folders can mix romset types, e.g. `NEOGEO`
+holding both real MAME arcade sets and Neo Geo Pocket homebrew):
 
-- **Arcade** (`CPS1`, `CPS2`, `CPS3`, `NEOGEO`, `NEOCD`) — these MAME
-  romsets are named by cryptic short codes (`ffight.zip`, not "Final
-  Fight"), which a general game database can't fuzzy-match. Resolved
-  instead via [ArcadeItalia](https://adb.arcadeitalia.net/)'s free, keyless
-  MAME database, which returns the real title, a numeric rating, and
-  language in one call — no API key needed for these platforms.
-- **Everything else** (consoles — `FC`, `SFC`, `GBA`, `GB`, `GBC`, `PS`,
-  `FDS`) — filenames are already descriptive (No-Intro style, e.g. "Donkey
-  Kong Country (U) (V1.1)"), so rating comes from
-  [RAWG.io](https://rawg.io/apidocs) by name search; language is parsed
-  from the filename's region/language tag (`(U)`, `(En,Fr,De)`, ...) since
-  RAWG has no per-release language field either.
+- A filename that looks like a bare MAME romset short-name (`ffight`, no
+  spaces or parens) is tried against `data/arcade_names.json` — a local,
+  offline MAME short-name → {title, rating, language} database bundled in
+  this repo (586 entries, built once via `build_offline_arcade_db.py` from
+  [ArcadeItalia](https://adb.arcadeitalia.net/)'s free MAME database). A hit
+  here costs **zero network calls**. Only a short-name with no local match
+  falls through to a live ArcadeItalia lookup.
+- Everything else — descriptive filenames (No-Intro style, e.g. "Donkey
+  Kong Country (U) (V1.1)"), or a MAME short-name with no match — falls
+  back to [RAWG.io](https://rawg.io/apidocs) by cleaned name for a numeric
+  rating; language is parsed from the filename's region/language tag
+  (`(U)`, `(En,Fr,De)`, ...) since RAWG has no per-release language field.
 
-Console lookups need a free RAWG API key: sign up at
-https://rawg.io/apidocs, copy your key, then either set it via the desktop
-app's Settings menu (persists to `~/.game_rater/config.json`) or set
-`RAWG_API_KEY` as an environment variable for the current shell.
+The RAWG fallback needs a free API key: sign up at https://rawg.io/apidocs,
+copy your key, then either set it via the desktop app's Settings menu
+(persists to `~/.game_rater/config.json`) or set `RAWG_API_KEY` as an
+environment variable. Without a key, MAME-shortname games still resolve
+fully offline; everything else gets language only, no rating.
 
 ```
 python scrape_metadata.py --roms-dir "F:\Roms" [PLATFORM ...]
@@ -88,6 +90,16 @@ python delete_flagged.py --all-sessions --yes
 ```
 
 Deletes the matching files on disk and drops those rows.
+
+### build_offline_arcade_db.py
+
+Extends `data/arcade_names.json` with any new MAME-shortname romsets found
+in a roms folder (incremental — skips short-names already in the file):
+
+```
+python build_offline_arcade_db.py --roms-dir "F:\Roms"
+python build_offline_arcade_db.py --roms-dir "F:\Roms" --platforms CPS1 NEOGEO
+```
 
 ### migrate_json_to_db.py
 

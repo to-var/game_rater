@@ -283,21 +283,25 @@ class GameRaterApp:
             messagebox.showinfo("Scrape Metadata", "Select a platform first.")
             return
 
-        is_arcade = self.current_platform in scrape_metadata.ARCADE_PLATFORMS
+        # Each game's lookup source is decided by its filename shape, not the
+        # platform folder, so a RAWG key isn't strictly required here: MAME
+        # romsets resolve via the offline db / ArcadeItalia regardless, and
+        # anything else just gets language-only if no key is set.
         api_key = os.environ.get("RAWG_API_KEY") or config.get_api_key()
-        if not api_key and not is_arcade:
+        if not api_key:
             api_key = simpledialog.askstring(
                 "RAWG API Key",
-                "No API key saved yet.\nEnter your free RAWG API key\n(https://rawg.io/apidocs):",
+                "No API key saved yet.\nEnter your free RAWG API key\n"
+                "(https://rawg.io/apidocs), or leave blank to skip ratings\n"
+                "for non-arcade games:",
                 show="*",
             )
-            if not api_key:
-                return
-            api_key = api_key.strip()
-            config.set_api_key(api_key)
-            self._update_api_key_warning()
+            if api_key:
+                api_key = api_key.strip()
+                config.set_api_key(api_key)
+                self._update_api_key_warning()
 
-        if not is_arcade:
+        if api_key:
             count, allowance = config.get_usage()
             if count >= allowance:
                 proceed = messagebox.askyesno(
