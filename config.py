@@ -1,12 +1,13 @@
 """
-Shared persistent config for game_rater: TheGamesDB API key and monthly API
-call usage tracking. Used by both scrape_metadata.py (CLI) and app.py (GUI)
-so the key only needs to be entered once and usage is tracked regardless of
-entry point.
+Shared persistent config for game_rater: RAWG.io API key (used to rate
+console games; arcade platforms use ArcadeItalia's keyless MAME db instead)
+and monthly API call usage tracking. Used by both scrape_metadata.py (CLI)
+and app.py (GUI) so the key only needs to be entered once and usage is
+tracked regardless of entry point.
 
 Stored at ~/.game_rater/config.json:
     {
-        "tgdb_api_key": "...",
+        "rawg_api_key": "...",
         "usage": {"month": "2026-08", "count": 17}
     }
 """
@@ -39,12 +40,12 @@ def save_config(cfg: dict) -> None:
 
 
 def get_api_key() -> str | None:
-    return load_config().get("tgdb_api_key")
+    return load_config().get("rawg_api_key")
 
 
 def set_api_key(api_key: str) -> None:
     cfg = load_config()
-    cfg["tgdb_api_key"] = api_key
+    cfg["rawg_api_key"] = api_key
     save_config(cfg)
 
 

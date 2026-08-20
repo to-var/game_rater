@@ -7,7 +7,7 @@ delete_flagged.py behind a Tkinter UI, backed by the SQLite DB in db.py:
     continue from there (remove flags / rating / language persist in the DB).
   - Browse each platform's games in a table, toggle "remove" per game
     (written straight to the DB, no separate save step).
-  - Scrape: fill in rating/language via TheGamesDB (API key persists in
+  - Scrape: fill in rating/language via RAWG.io (API key persists in
     ~/.game_rater/config.json, editable from the Settings menu). Usage
     against the monthly allowance is tracked there too.
 
@@ -96,7 +96,7 @@ class GameRaterApp:
         menubar.add_cascade(label="File", menu=file_menu)
 
         settings_menu = tk.Menu(menubar, tearoff=0)
-        settings_menu.add_command(label="Set TheGamesDB API Key...", command=self._on_set_api_key)
+        settings_menu.add_command(label="Set RAWG API Key...", command=self._on_set_api_key)
         settings_menu.add_command(label="View API Usage...", command=self._on_view_usage)
         menubar.add_cascade(label="Settings", menu=settings_menu)
 
@@ -105,8 +105,8 @@ class GameRaterApp:
     def _on_set_api_key(self):
         current = config.get_api_key() or ""
         new_key = simpledialog.askstring(
-            "TheGamesDB API Key",
-            "Enter your TheGamesDB API key\n(https://thegamesdb.net/):",
+            "RAWG API Key",
+            "Enter your RAWG API key\n(https://rawg.io/apidocs):",
             initialvalue=current,
             show="*",
         )
@@ -118,7 +118,7 @@ class GameRaterApp:
     def _on_view_usage(self):
         count, allowance = config.get_usage()
         messagebox.showinfo(
-            "TheGamesDB API Usage",
+            "RAWG API Usage",
             f"Calls used this month: {count} / {allowance}\n"
             f"Remaining: {max(allowance - count, 0)}",
         )
@@ -177,11 +177,11 @@ class GameRaterApp:
         self.log_text.pack(fill="both", expand=True)
 
     def _update_api_key_warning(self):
-        if config.get_api_key() or os.environ.get("TGDB_API_KEY"):
+        if config.get_api_key() or os.environ.get("RAWG_API_KEY"):
             self.warning_label.configure(text="")
         else:
             self.warning_label.configure(
-                text="⚠ TheGamesDB API key not set — set it via Settings → Set TheGamesDB API Key..."
+                text="⚠ RAWG API key not set — set it via Settings → Set RAWG API Key..."
             )
 
     # ---------- logging ----------
@@ -284,11 +284,11 @@ class GameRaterApp:
             return
 
         is_arcade = self.current_platform in scrape_metadata.ARCADE_PLATFORMS
-        api_key = os.environ.get("TGDB_API_KEY") or config.get_api_key()
+        api_key = os.environ.get("RAWG_API_KEY") or config.get_api_key()
         if not api_key and not is_arcade:
             api_key = simpledialog.askstring(
-                "TheGamesDB API Key",
-                "No API key saved yet.\nEnter your free TheGamesDB API key\n(https://thegamesdb.net/):",
+                "RAWG API Key",
+                "No API key saved yet.\nEnter your free RAWG API key\n(https://rawg.io/apidocs):",
                 show="*",
             )
             if not api_key:
@@ -302,7 +302,7 @@ class GameRaterApp:
             if count >= allowance:
                 proceed = messagebox.askyesno(
                     "Monthly Allowance Reached",
-                    f"You've used {count}/{allowance} TheGamesDB calls this month.\n"
+                    f"You've used {count}/{allowance} RAWG calls this month.\n"
                     "Continue anyway?",
                 )
                 if not proceed:
@@ -315,9 +315,7 @@ class GameRaterApp:
 
     def _scrape_worker(self, session_id: int, platform: str, api_key: str):
         try:
-            is_arcade = platform in scrape_metadata.ARCADE_PLATFORMS
-            platform_ids = {} if is_arcade else scrape_metadata.load_platform_ids(api_key)
-            scrape_metadata.scrape_platform(session_id, platform, api_key, platform_ids, log=self._log)
+            scrape_metadata.scrape_platform(session_id, platform, api_key, log=self._log)
             self._log(f"Scrape complete for {platform}.")
         except Exception as e:
             self._log(f"Scrape failed: {e}")

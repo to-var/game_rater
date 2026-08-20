@@ -30,9 +30,11 @@ python app.py
 - **Scrape Metadata** — fills rating/language for the selected platform.
 - **Delete Flagged Files** — deletes every file flagged `remove` in the
   current session, after confirmation.
-- **Settings → Set TheGamesDB API Key...** — saved to
+- **Settings → Set RAWG API Key...** — saved to
   `~/.game_rater/config.json`, reused across runs and by the CLI scripts. A
-  red warning banner shows in the main window whenever no key is set.
+  red warning banner shows in the main window whenever no key is set. Only
+  needed for console platforms — arcade platforms don't need a key at all
+  (see below).
 - **Settings → View API Usage...** — calls used this month vs. the 1000/mo
   allowance (auto-resets each calendar month).
 
@@ -48,15 +50,26 @@ Scans the folder and upserts games into the session for that path.
 
 ### scrape_metadata.py
 
-Fills in `rating` (via [TheGamesDB](https://thegamesdb.net/)) and `language`
-(parsed from filename region/language tags, e.g. `(U)`, `(En,Fr,De)` —
-TheGamesDB has no per-release language field).
+Metadata source depends on platform, since a single API doesn't cover both
+well:
 
-Needs a free TheGamesDB API key: create an account at
-https://thegamesdb.net/, copy your key from your account page, then either
-set it via the desktop app's Settings menu (persists to
-`~/.game_rater/config.json`) or set `TGDB_API_KEY` as an environment
-variable for the current shell.
+- **Arcade** (`CPS1`, `CPS2`, `CPS3`, `NEOGEO`, `NEOCD`) — these MAME
+  romsets are named by cryptic short codes (`ffight.zip`, not "Final
+  Fight"), which a general game database can't fuzzy-match. Resolved
+  instead via [ArcadeItalia](https://adb.arcadeitalia.net/)'s free, keyless
+  MAME database, which returns the real title, a numeric rating, and
+  language in one call — no API key needed for these platforms.
+- **Everything else** (consoles — `FC`, `SFC`, `GBA`, `GB`, `GBC`, `PS`,
+  `FDS`) — filenames are already descriptive (No-Intro style, e.g. "Donkey
+  Kong Country (U) (V1.1)"), so rating comes from
+  [RAWG.io](https://rawg.io/apidocs) by name search; language is parsed
+  from the filename's region/language tag (`(U)`, `(En,Fr,De)`, ...) since
+  RAWG has no per-release language field either.
+
+Console lookups need a free RAWG API key: sign up at
+https://rawg.io/apidocs, copy your key, then either set it via the desktop
+app's Settings menu (persists to `~/.game_rater/config.json`) or set
+`RAWG_API_KEY` as an environment variable for the current shell.
 
 ```
 python scrape_metadata.py --roms-dir "F:\Roms" [PLATFORM ...]

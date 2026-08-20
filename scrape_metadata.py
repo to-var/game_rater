@@ -1,12 +1,19 @@
 """
-Fill in "rating" and "language" for games stored in the DB (see db.py) using
-TheGamesDB (https://thegamesdb.net/) for rating, and filename region/
-language tags for language (TheGamesDB has no per-release language field,
-so this is the best available signal without a different API).
+Fill in "rating" and "language" for games stored in the DB (see db.py).
 
-Setup: set your API key persistently via the desktop app's Settings menu
-(saved to ~/.game_rater/config.json), or set the TGDB_API_KEY environment
-variable. Get a free key at https://thegamesdb.net/.
+Metadata source depends on platform:
+  - Arcade (CPS1/2/3, Neo Geo, Neo Geo CD): MAME romsets are named by
+    cryptic short codes ("ffight.zip") instead of descriptive filenames.
+    Resolved via ArcadeItalia's free, keyless MAME database, which also
+    happens to return name + rating + language in one call.
+  - Everything else (consoles): looked up on RAWG.io by cleaned game name
+    for a numeric rating; language is derived from filename region/language
+    tags (No-Intro/GoodTools style, e.g. "(U)", "(En,Fr,De)") since neither
+    RAWG nor TheGamesDB expose a real per-release language field.
+
+Setup: set your RAWG API key persistently via the desktop app's Settings
+menu (saved to ~/.game_rater/config.json), or set the RAWG_API_KEY
+environment variable. Get a free key at https://rawg.io/apidocs.
 
 Usage:
     python scrape_metadata.py --roms-dir "F:\\Roms"             # all platforms in that session
@@ -29,31 +36,12 @@ from pathlib import Path
 import config
 import db
 
-API_BASE = "https://api.thegamesdb.net/v1"
-REQUEST_DELAY_SECONDS = 1.0  # be polite to the free-tier API
+REQUEST_DELAY_SECONDS = 1.0  # be polite to free-tier APIs
 
-# MAME arcade romsets (CPS1/2/3, Neo Geo) are named by cryptic short codes
-# (e.g. "ffight.zip") instead of descriptive filenames, and TheGamesDB can't
-# fuzzy-match those. For these platforms we resolve name/rating/language via
-# ArcadeItalia's free, keyless MAME database instead of TheGamesDB.
 ARCADE_PLATFORMS = {"CPS1", "CPS2", "CPS3", "NEOGEO", "NEOCD"}
 ARCADE_ITALIA_URL = "https://adb.arcadeitalia.net/service_scraper.php"
 
-# Our roms folder name -> a name (or substring) of TheGamesDB's platform.
-PLATFORM_NAME_HINTS = {
-    "FC": "Nintendo Entertainment System (NES)",
-    "SFC": "Super Nintendo (SNES)",
-    "GBA": "Nintendo Game Boy Advance",
-    "GB": "Nintendo Game Boy",
-    "GBC": "Nintendo Game Boy Color",
-    "PS": "Sony Playstation",
-    "NEOGEO": "Neo Geo",
-    "NEOCD": "Neo Geo CD",
-    "FDS": "Nintendo Famicom Disk System",
-    "CPS1": "Arcade",
-    "CPS2": "Arcade",
-    "CPS3": "Arcade",
-}
+RAWG_API_BASE = "https://api.rawg.io/api"
 
 # Region/language tags commonly found in No-Intro / GoodTools style ROM
 # filenames, e.g. "Donkey Kong Country (U) (V1.1).zip" or
@@ -104,63 +92,25 @@ def clean_search_name(name: str) -> str:
     return " ".join(name.split()).strip()
 
 
-def api_get(path: str, api_key: str, params: dict) -> dict:
-    query = dict(params)
-    query["apikey"] = api_key
-    url = f"{API_BASE}/{path}?{urllib.parse.urlencode(query)}"
-    with urllib.request.urlopen(url, timeout=15) as resp:
-        result = json.loads(resp.read().decode("utf-8"))
-    config.record_api_call()
-    return result
-
-
-_platform_id_cache: dict | None = None
-
-
-def load_platform_ids(api_key: str) -> dict:
-    global _platform_id_cache
-    if _platform_id_cache is not None:
-        return _platform_id_cache
-
-    data = api_get("Platforms", api_key, {})
-    platforms = data["data"]["platforms"]  # id -> {name, ...}
-
-    name_to_id = {info["name"]: pid for pid, info in platforms.items()}
-    resolved = {}
-    for folder, hint in PLATFORM_NAME_HINTS.items():
-        match_id = None
-        if hint in name_to_id:
-            match_id = name_to_id[hint]
-        else:
-            for name, pid in name_to_id.items():
-                if hint.lower() in name.lower():
-                    match_id = pid
-                    break
-        if match_id is None:
-            print(f"WARNING: no TheGamesDB platform match for '{folder}' (hint: {hint})")
-        resolved[folder] = match_id
-
-    _platform_id_cache = resolved
-    return resolved
-
-
-def lookup_rating(api_key: str, name: str, platform_id, log=print) -> float | None:
-    params = {"name": name}
-    if platform_id is not None:
-        params["filter[platform]"] = platform_id
+def lookup_rawg_rating(api_key: str, name: str, log=print) -> float | None:
+    """RAWG's user rating is 0-5; scaled to 0-10 to match the arcade rating scale."""
+    params = {"search": name, "page_size": 1, "key": api_key}
+    url = f"{RAWG_API_BASE}/games?{urllib.parse.urlencode(params)}"
     try:
-        data = api_get("Games/ByGameName", api_key, params)
+        with urllib.request.urlopen(url, timeout=15) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
     except Exception as e:
-        log(f"  API error for '{name}': {e}")
+        log(f"  RAWG error for '{name}': {e}")
+        return None
+    config.record_api_call()
+
+    results = data.get("results") or []
+    if not results:
         return None
 
-    games = data.get("data", {}).get("games", [])
-    if not games:
-        return None
-
-    rating = games[0].get("rating")
+    rating = results[0].get("rating")
     try:
-        return float(rating) if rating not in (None, "") else None
+        return round(float(rating) * 2, 1) if rating not in (None, "") else None
     except (TypeError, ValueError):
         return None
 
@@ -213,18 +163,13 @@ def scrape_arcade_platform(session_id: int, platform: str, log=print) -> None:
     log(f"{platform}: done ({len(games)} entries scraped)")
 
 
-def scrape_platform(session_id: int, platform: str, api_key: str, platform_ids: dict, log=print) -> None:
-    if platform in ARCADE_PLATFORMS:
-        scrape_arcade_platform(session_id, platform, log=log)
-        return
-
+def scrape_console_platform(session_id: int, platform: str, api_key: str, log=print) -> None:
     games = db.get_games_needing_scrape(session_id, platform)
-    platform_id = platform_ids.get(platform)
 
-    log(f"{platform}: {len(games)} entries need scraping")
+    log(f"{platform}: {len(games)} entries need scraping (RAWG)")
     for game in games:
         search_name = clean_search_name(game["name"])
-        rating = lookup_rating(api_key, search_name, platform_id, log=log)
+        rating = lookup_rawg_rating(api_key, search_name, log=log)
         language = parse_language(game["name"])
         db.update_metadata(game["id"], rating, language)
         log(f"  [{platform}] {game['name']!r} -> rating={rating}, language={language}")
@@ -233,8 +178,15 @@ def scrape_platform(session_id: int, platform: str, api_key: str, platform_ids: 
     log(f"{platform}: done ({len(games)} entries scraped)")
 
 
+def scrape_platform(session_id: int, platform: str, api_key: str | None, log=print) -> None:
+    if platform in ARCADE_PLATFORMS:
+        scrape_arcade_platform(session_id, platform, log=log)
+    else:
+        scrape_console_platform(session_id, platform, api_key, log=log)
+
+
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Fill in rating and language for ROM games in the database using TheGamesDB.")
+    parser = argparse.ArgumentParser(description="Fill in rating and language for ROM games in the database.")
     parser.add_argument("--roms-dir", help=r'Roms folder identifying the session, e.g. "F:\Roms"')
     parser.add_argument("--session-id", type=int, help="Session id (alternative to --roms-dir)")
     parser.add_argument("platforms", nargs="*", help="Platform names to process (default: all platforms in the session)")
@@ -252,21 +204,19 @@ def main() -> None:
         session_id = db.get_or_create_session(str(Path(args.roms_dir).resolve()))
 
     platforms = args.platforms or db.get_platforms(session_id)
-    needs_tgdb = any(p not in ARCADE_PLATFORMS for p in platforms)
+    needs_rawg = any(p not in ARCADE_PLATFORMS for p in platforms)
 
-    api_key = os.environ.get("TGDB_API_KEY") or config.get_api_key()
-    if needs_tgdb and not api_key:
+    api_key = os.environ.get("RAWG_API_KEY") or config.get_api_key()
+    if needs_rawg and not api_key:
         raise SystemExit(
-            "Missing TheGamesDB API key. Either set the TGDB_API_KEY environment "
+            "Missing RAWG API key. Either set the RAWG_API_KEY environment "
             "variable, or set one persistently via the desktop app's Settings menu "
             "(saved to ~/.game_rater/config.json). Get a free key at "
-            "https://thegamesdb.net/."
+            "https://rawg.io/apidocs."
         )
 
-    platform_ids = load_platform_ids(api_key) if needs_tgdb else {}
-
     for platform in platforms:
-        scrape_platform(session_id, platform, api_key, platform_ids)
+        scrape_platform(session_id, platform, api_key)
 
 
 if __name__ == "__main__":
